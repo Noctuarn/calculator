@@ -5,7 +5,7 @@ export default function OperationButton(props){
 
     return (
         <button
-          className="calculator__button"
+          className="calculator__button calculator__button_blue"
           onClick={() => {
             dispatch({ type: ACTIONS.CHOOSE_OPERATION, payload: { operation } });
           }}

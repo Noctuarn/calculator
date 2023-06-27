@@ -139,6 +139,9 @@ function App() {
 
   return (
     <div className="body">
+
+    <h1 className="title">My calculator</h1>
+
       <div className="calculator">
         <div className="calculator__output">
           <div className="calculator__prev-operand">
@@ -150,12 +153,12 @@ function App() {
           onClick={() => {
             dispatch({ type: ACTIONS.CLEAR });
           }}
-          className="calculator__button calculator__button_big"
+          className="calculator__button calculator__button_big calculator__button_gray"
         >
-          AC
+          C
         </button>
-        <button onClick={() => {dispatch({type: ACTIONS.DELETE_DIGITS})}} className="calculator__button">DEL</button>
-        <OperationButton dispatch={dispatch} operation="-" />
+        <button onClick={() => {dispatch({type: ACTIONS.DELETE_DIGITS})}} className="calculator__button calculator__button_gray">DEL</button>
+        <OperationButton dispatch={dispatch} operation="/" />
 
         <DigitButton dispatch={dispatch} digit="1" />
         <DigitButton dispatch={dispatch} digit="2" />
@@ -181,7 +184,7 @@ function App() {
           onClick={() => {
             dispatch({ type: ACTIONS.EVALUATE });
           }}
-          className="calculator__button calculator__button_big"
+          className="calculator__button calculator__button_big calculator__button_light-blue"
         >
           =
         </button>
